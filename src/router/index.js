@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import IsaraView from '../views/IsaraView.vue'
 import LoginView from '../views/LoginView.vue'
+import WelcomeView from '../views/WelcomeView.vue'
+import PaySlipView from '../views/pay_slip.vue'
 
 const routes = [
   {
@@ -31,6 +33,16 @@ const routes = [
         path: '/login',
         name: 'login',
         component: LoginView
+  },
+  {
+          path: '/welcome',
+          name: 'welcome',
+          component: WelcomeView
+  },
+  {
+            path: '/pay_slip_screen',
+            name: 'pay_slip_screen',
+            component: PaySlipView
   },
 ]
 
