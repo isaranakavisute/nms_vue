@@ -1,11 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import IsaraView from '../views/IsaraView.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'isarahome',
+    component: IsaraView
+  },
+  {
+      path: '/home',
+      name: 'home',
+      component: HomeView
+  },
+  {
+      path: '/isara',
+      name: 'isara',
+      component: IsaraView
   },
   {
     path: '/about',

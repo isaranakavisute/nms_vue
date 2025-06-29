@@ -1,34 +1,33 @@
 <template>
-
- <div class="flex flex-row items-center justify-center w-full h-screen bg-yellow-300">
-
-  <div class="flex flex-row items-center justify-center w-1/2 h-screen bg-yellow-300">
-   <div class="flex flex-row items-center justify-center w-4/5 bg-green-200 h-4/5">
-    <div class="flex flex-row items-center justify-center w-4/5 bg-black h-4/5">
-     <div class="items-center justify-center text-4xl text-white">
-      Test
-     </div>
-    </div>
-   </div>
-  </div>
-
-
-  <div class="flex flex-row items-center justify-center w-1/2 h-screen bg-yellow-300">
-   <div class="flex flex-row items-center justify-center w-4/5 bg-green-200 h-4/5">
-    <div class="flex flex-row items-center justify-center w-4/5 bg-black h-4/5">
-     <div class="items-center justify-center text-4xl text-white">
-      Test
-     </div>
-    </div>
-   </div>
-  </div>
-
-</div>
-
+  <!--<img alt="Vue logo" src="./assets/logo.png">-->
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <!-- <LoginView/> -->
+  <RouterView />
 </template>
 
 <script>
+// import HelloWorld from './components/HelloWorld.vue'
+// import LoginView from './components/LoginView.vue'
+// import IsaraView from './views/LoginView.vue'
+// import IsaraView from './views/IsaraView.vue'
+
 export default {
   name: 'App',
-};
+  components: {
+    // HelloWorld,
+    // LoginView
+    // IsaraView
+  }
+}
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
