@@ -112,11 +112,9 @@
             });
       }
    },
-   /*
    beforeMount() {
     this.search();
-  },
-  */
+  }
   }
   </script>
 
