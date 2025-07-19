@@ -4,6 +4,7 @@ import IsaraView from '../views/IsaraView.vue'
 import LoginView from '../views/LoginView.vue'
 import WelcomeView from '../views/WelcomeView.vue'
 import PaySlipView from '../views/pay_slip.vue'
+import HistoryView from '../views/history.vue'
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
             path: '/pay_slip_screen',
             name: 'pay_slip_screen',
             component: PaySlipView
+  },
+  {
+            path: '/history_screen',
+            name: 'history_screen',
+            component: HistoryView
   },
 ]
 

@@ -11,7 +11,7 @@
                      />
                      -->
                     </div>
-                    <div className="text-2xl">Welcome User</div><div className="pl-1 text-2xl text-blue-300">View Slip</div>
+                    <div className="text-2xl">Welcome {{ getUsername() }}</div><!--<div className="pl-1 text-2xl text-blue-300">View Slip</div>-->
                    </div>
                   <div className="flex h-[15vh] flex-row items-center justify-center pr-10">
                    <button className="rounded-lg bg-blue-300 pb-5 pl-20 pr-20 pt-5 text-2xl opacity-100">Log Out</button>
@@ -826,5 +826,28 @@
         </div>
   </div>
 </template>
+
+ <script>
+  import { GET_USERNAME } from "../store/storeconstants";
+  export default {
+    name: 'WelcomeVIew',
+    data() {
+      return {}
+    },
+    methods:{
+      getUsername() {
+      return this.$store.getters[`auth/${GET_USERNAME}`]
+    },
+    /*
+     payslip_screen(){
+       this.$router.push('/pay_slip_screen')
+     },
+     history_screen(){
+            this.$router.push('/history_screen')
+          }
+    */
+   }
+  }
+  </script>
 
 
