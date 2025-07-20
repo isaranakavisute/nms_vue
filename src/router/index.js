@@ -5,6 +5,8 @@ import LoginView from '../views/LoginView.vue'
 import WelcomeView from '../views/WelcomeView.vue'
 import PaySlipView from '../views/pay_slip.vue'
 import HistoryView from '../views/history.vue'
+import AdminView from '../views/admin.vue'
+import UploadView from '../views/upload.vue'
 
 const routes = [
   {
@@ -49,6 +51,16 @@ const routes = [
             path: '/history_screen',
             name: 'history_screen',
             component: HistoryView
+  },
+  {
+            path: '/admin',
+            name: 'admin',
+            component: AdminView
+  },
+  {
+            path: '/upload_screen',
+            name: 'upload_screen',
+            component: UploadView
   },
 ]
 

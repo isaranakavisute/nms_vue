@@ -20,6 +20,7 @@
                </div>
                <p>Username is: {{input.username}}</p>
                <p>Password is: {{input.password}}</p>
+               <p>Message: {{input.login_status}}</p>
              </div>
      </div>
  </div>
@@ -34,20 +35,34 @@ export default {
     return{
         input:{
             username: "",
-            password: ""
+            password: "",
+            login_status: ""
         }
     }
   },
    methods:{
       login(){
         //make sure username OR password are not empty
-        if (this.input.username != "" || this.input.password != ""){
+        if (this.input.username == "user" && this.input.password == "user"){
           console.log("authenticated")
           this.$router.push('/welcome')
           this.$store.commit(`auth/${SET_AUTHENTICATION}`, true);
           this.$store.commit(`auth/${SET_USERNAME}`, this.input.username);
-        }else {
-          console.log("Username and Password can not be empty")
+        }
+        else if (this.input.username == "admin" && this.input.password == "admin"){
+          console.log("authenticated")
+          this.$router.push('/admin')
+          this.$store.commit(`auth/${SET_AUTHENTICATION}`, true);
+          this.$store.commit(`auth/${SET_USERNAME}`, this.input.username);
+        }
+        else if (this.input.username != "" && this.input.password != "") {
+          console.log("Username/Password is wrong");
+          this.input.login_status = "Username/Password is wrong.";
+        }
+        else
+        {
+          console.log("Username/Password is empty");
+          this.input.login_status = "Username/Password is empty.";
         }
       }
     },
