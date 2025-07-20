@@ -69,7 +69,7 @@
       {
        let formData = new FormData();
        formData.append('uploadpath', this.uploadpath);
-       axios.post( 'http://127.0.0.1:5000/nms/get_temp_table',
+       axios.post( 'http://deploy-aws.com:5000/nms/get_temp_table',
                 formData,
                 {
                 headers: {
