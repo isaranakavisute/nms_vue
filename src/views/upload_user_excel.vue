@@ -75,7 +75,7 @@
        let formData = new FormData();
        formData.append('file', this.file);
        formData.append('publication_date', this.input.publication_date);
-       axios.post( 'http://127.0.0.1:5000/nms/upload_user_file',
+       axios.post( 'http://deploy-aws.com:5000/nms/upload_user_file',
                 formData,
                 {
                 headers: {
@@ -103,7 +103,7 @@
       {
        let formData = new FormData();
        formData.append('uploadpath', this.uploadpath);
-       axios.post( 'http://127.0.0.1:5000/nms/write_user_prd',
+       axios.post( 'http://deploy-aws.com:5000/nms/write_user_prd',
                 formData,
                 {
                 headers: {
