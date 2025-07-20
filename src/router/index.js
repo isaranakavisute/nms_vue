@@ -9,6 +9,7 @@ import AdminView from '../views/admin.vue'
 import UploadView from '../views/upload.vue'
 import AdminCheckUploadView from '../views/admincheckupload.vue'
 import UploadUserExcel from '../views/upload_user_excel'
+import UserCheckUploadView from '../views/usercheckupload.vue'
 
 const routes = [
   {
@@ -73,6 +74,11 @@ const routes = [
             path: '/upload_user_excel',
             name: 'upload_user_excel',
             component: UploadUserExcel
+  },
+  {
+            path: '/user_check_upload',
+            name: 'user_check_upload',
+            component: UserCheckUploadView
   }
 ]
 

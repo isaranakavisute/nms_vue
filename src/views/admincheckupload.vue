@@ -36,7 +36,7 @@
          </div>
         <div className="flex w-full flex-row items-top justify-between border-0 border-solid pt-5">
           <div className="flex h-4/5 w-1/4 flex-col items-center justify-center bg-white pb-10">
-            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="">Back</button>
+            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="go_back()">Back</button>
           </div>
           <div className="flex h-4/5 w-1/4 flex-col items-center justify-center bg-white pb-10">
             <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="">Setup</button>
@@ -94,6 +94,10 @@
 
       open_payslip(){
         this.$router.push('/pay_slip_screen')
+      },
+
+       go_back() {
+        this.$router.go(-1);
       }
    },
   beforeMount() {

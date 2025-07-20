@@ -19,7 +19,7 @@
         </div>
         <div className="flex h-screen w-full flex-row items-top justify-between border-2 border-solid">
           <div className="flex h-full w-1/4 flex-col items-center justify-end bg-white pb-0">
-            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100">Back</button>
+            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="go_back()">Back</button>
           </div>
 
 
@@ -838,6 +838,9 @@
       getUsername() {
       return this.$store.getters[`auth/${GET_USERNAME}`]
     },
+    go_back() {
+        this.$router.go(-1);
+      }
     /*
      payslip_screen(){
        this.$router.push('/pay_slip_screen')

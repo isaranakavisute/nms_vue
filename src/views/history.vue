@@ -51,7 +51,7 @@
          </div>
         <div className="flex w-full flex-row items-top justify-start border-0 border-solid pt-5">
           <div className="flex h-4/5 w-1/4 flex-col items-center justify-end bg-white pb-10">
-            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100">Back</button>
+            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="go_back()">Back</button>
           </div>
         </div>
       </div>
@@ -110,6 +110,9 @@
             .catch(error => {
                 console.error(error);
             });
+      },
+      go_back() {
+        this.$router.go(-1);
       }
    },
    beforeMount() {
