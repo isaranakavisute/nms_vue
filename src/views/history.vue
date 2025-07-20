@@ -97,7 +97,7 @@
       return this.$store.getters[`auth/${GET_USERNAME}`]
     },
       search() {
-        axios.post('http://127.0.0.1:5000/nms/listall', { name: '123' })
+        axios.post('http://deploy-aws.com:5000/nms/listall', { name: '123' })
             .then(response => {
                 console.log(response.data);
 
