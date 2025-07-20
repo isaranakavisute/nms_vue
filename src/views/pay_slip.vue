@@ -17,8 +17,8 @@
                    <button className="rounded-lg bg-blue-300 pb-5 pl-20 pr-20 pt-5 text-2xl opacity-100">Log Out</button>
                   </div>
         </div>
-        <div className="flex h-screen w-full flex-row items-top justify-between border-2 border-solid bg-yellow-200">
-          <div className="flex h-4/5 w-1/4 flex-col items-center justify-end bg-white pb-10">
+        <div className="flex h-screen w-full flex-row items-top justify-between border-2 border-solid">
+          <div className="flex h-full w-1/4 flex-col items-center justify-end bg-white pb-0">
             <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100">Back</button>
           </div>
 
@@ -814,12 +814,12 @@
 
 
 
-           <div className="flex h-4/5 w-1/4 flex-row items-center justify-end">
+           <div className="flex h-full w-1/4 flex-row items-center justify-end">
                      <div className="flex h-full w-[30vh] flex-row items-start justify-start border-0 border-solid border-black bg-white pb-5 pl-5 pt-5">
                       Publication date
                       2014.12.25
                      </div>
-                     <div className="flex h-full w-full flex-row items-end justify-end bg-white pb-10 pr-10">
+                     <div className="flex h-full w-full flex-row items-end justify-end bg-white pb-0 pr-10">
                       <button className="text-1xl rounded-lg bg-blue-300 pb-2 pl-10 pr-10 pt-2 opacity-100">Downlod PDF</button>
                      </div>
            </div>

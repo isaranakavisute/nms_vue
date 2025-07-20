@@ -12,27 +12,17 @@
         <div className="flex h-[15%] w-full flex-row items-center justify-start border-2 border-solid">
                   <input type="file" id="file" ref="file" v-on:change="handleFileUpload()" className="h-full border border-solid border-yellow text-black bg-yellow-100" />
                   <button v-on:click="submitFile()" className="ml-5 mr-5 bg-blue-100">Upload</button>
-                  <div className="ml-5 text-xs">Publication Date</div>
-                  <input type="text" id="publication_date" name="publication_date" v-model="input.publication_date" className="ml-5 border border-solid border-yellow text-2xl cursor-wait mr-5 bg-yellow-100"  />
         </div>
         <div className="flex h-screen w-full flex-col justify-between">
          <div className="flex flex-col">
           <div className="flex w-full flex-row border-t border-solid border-black bg-green-200">
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">No.</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">ID</div>
+           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Mr,Mrs</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Name</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">แผนก</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">ID.Card.</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Start working</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Salary_Day</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Salary_Pay</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">Paid Salary</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">Total OT</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">Total Welfare</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">Total Income</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">Total Payment</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">รายได้สะสมประจำปี</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">ประกันสะสมประจำปี</div>
+           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Surname</div>
+           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Company</div>
+           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Password</div>
           </div>
           <div className="flex w-full flex-row border-t border-b border-solid border-black" v-for="item in items">
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[0]}}</div>
@@ -42,19 +32,14 @@
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[4]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[5]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[6]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[7]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[8]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[9]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[10]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[11]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[12]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[13]}}</div>
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">{{item[14]}}</div>
           </div>
          </div>
-        <div className="flex w-full flex-row items-top justify-end border-0 border-solid pt-5">
+        <div className="flex w-full flex-row items-top justify-between border-0 border-solid pt-5">
           <div className="flex h-4/5 w-1/4 flex-col items-center justify-end bg-white pb-10">
-            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="write_to_prd()">Check</button>
+            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="">Back</button>
+          </div>
+          <div className="flex h-4/5 w-1/4 flex-col items-center justify-end bg-white pb-10">
+            <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="">Register</button>
           </div>
         </div>
       </div>

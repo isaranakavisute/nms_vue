@@ -42,7 +42,7 @@
     upload_screen() {this.$router.push('/upload_screen')},
     admin_history_screen() {this.$router.push('/history_screen')},
     statistics_screen() {this.$router.push('/history_screen')},
-    usermanagement_screen() {this.$router.push('/history_screen')},
+    usermanagement_screen() {this.$router.push('/upload_user_excel')},
    }
   }
   </script>
