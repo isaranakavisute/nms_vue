@@ -10,6 +10,7 @@ import UploadView from '../views/upload.vue'
 import AdminCheckUploadView from '../views/admincheckupload.vue'
 import UploadUserExcel from '../views/upload_user_excel'
 import UserCheckUploadView from '../views/usercheckupload.vue'
+import PaySlipAdminView from '../views/pay_slip_admin.vue'
 
 const routes = [
   {
@@ -79,7 +80,12 @@ const routes = [
             path: '/user_check_upload',
             name: 'user_check_upload',
             component: UserCheckUploadView
-  }
+  },
+  {
+            path: '/pay_slip_admin',
+            name: 'pay_slip_admin',
+            component: PaySlipAdminView
+  },
 ]
 
 const router = createRouter({

@@ -1,21 +1,21 @@
 <template>
   <div className="flex flex-col w-screen h-screen">
-        <div className="flex h-[5%] w-full items-center justify-center bg-blue-300 text-2xl">Pay Slip Sharing Tool</div>
+        <div className="flex h-[5%] w-full items-center justify-center bg-blue-900 text-2xl text-white">Pay Slip Sharing Tool</div>
         <div className="flex h-[15%] w-full flex-row items-center justify-between border-2 border-solid">
                   <div className="flex h-[15vh] flex-row items-start">
                     <div className="text-2xl">Welcome {{ getUsername() }}</div>
                   </div>
-                  <div className="flex h-[15vh] flex-row items-center justify-center pr-10">
-                   <button className="rounded-lg bg-blue-300 pb-5 pl-20 pr-20 pt-5 text-2xl opacity-100">Log Out</button>
+                  <div className="flex h-[5vh] flex-row items-center justify-center pr-10 mt-2 mb-2">
+                   <button className="rounded-lg bg-blue-900 pb-5 pl-20 pr-20 pt-5 text-xs opacity-100 text-white">Log Out</button>
                   </div>
         </div>
         <div className="flex h-[15%] w-full flex-row items-center justify-start border-2 border-solid">
-                  <input type="file" id="file" ref="file" v-on:change="handleFileUpload()" className="h-full border border-solid border-yellow text-black bg-yellow-100" />
-                  <button v-on:click="submitFile()" className="ml-5 mr-5 bg-blue-100">Upload</button>
+                  <input type="file" id="file" ref="file" v-on:change="handleFileUpload()" className="h-full border border-solid border-yellow text-black bg-white" />
+                  <button v-on:click="submitFile()" className="ml-5 mr-5 bg-blue-900 text-white">Upload</button>
         </div>
         <div className="flex h-screen w-full flex-col justify-between">
          <div className="flex flex-col">
-          <div className="flex w-full flex-row border-t border-solid border-black bg-green-200">
+          <div className="flex w-full flex-row border-t border-solid border-black bg-white">
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">No.</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">ID</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Mr,Mrs</div>
@@ -25,14 +25,17 @@
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">Password</div>
           </div>
           <div className="flex w-full flex-row border-t border-b border-solid border-black" v-for="item in items">
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[0]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[1]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[2]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[3]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[4]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[5]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[6]}}</div>
+           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[7]}}</div>
           </div>
+         </div>
+         <div className="flex flex-row items-end justify-center h-full w-full bg-white">
+           <img alt="" src="../assets/loading_gif.gif" v-if="loading" className="h-1/2 w-1/4 bg-white">
          </div>
         <div className="flex w-full flex-row items-top justify-between border-0 border-solid pt-5">
           <div className="flex h-4/5 w-1/4 flex-col items-center justify-end bg-white pb-10">
@@ -59,7 +62,8 @@
         },
         items: [],
         file: '',
-        uploadpath: ''
+        uploadpath: '',
+        loading:false
       }
     },
     methods:{
@@ -75,6 +79,8 @@
        let formData = new FormData();
        formData.append('file', this.file);
        formData.append('publication_date', this.input.publication_date);
+       this.loading = true;
+       this.items = []
        axios.post( 'http://deploy-aws.com:5000/nms/upload_user_file',
                 formData,
                 {
@@ -85,11 +91,12 @@
             ).then( 
               response => { 
               console.log(response.data); 
+              this.loading = false;
               this.uploadpath = response.data.upload_excel.full_uploaded_file_path;
               console.log(this.uploadpath);
               let object_index = 0;
                 for (let k in response.data.uploaded_data) {
-                 response.data.uploaded_data[object_index][0] = object_index + 1;
+                 //response.data.uploaded_data[object_index][0] = object_index + 1;
                  this.items.push(response.data.uploaded_data[object_index]);
                  object_index++;
                 }

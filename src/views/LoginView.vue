@@ -44,10 +44,11 @@ export default {
       login(){
         //make sure username OR password are not empty
         if (this.input.username == "user" && this.input.password == "user"){
-          console.log("authenticated")
-          this.$router.push('/welcome')
-          this.$store.commit(`auth/${SET_AUTHENTICATION}`, true);
-          this.$store.commit(`auth/${SET_USERNAME}`, this.input.username);
+          console.log("cannot enter user mode")
+          this.input.login_status = "User Mode is not opened for testing";
+          //this.$router.push('/welcome')
+          //this.$store.commit(`auth/${SET_AUTHENTICATION}`, true);
+          //this.$store.commit(`auth/${SET_USERNAME}`, this.input.username);
         }
         else if (this.input.username == "admin" && this.input.password == "admin"){
           console.log("authenticated")

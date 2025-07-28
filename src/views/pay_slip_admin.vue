@@ -12,27 +12,609 @@
                     <button className="rounded-lg bg-blue-300 pb-2 pl-2 pr-2 pt-2 text-xs opacity-100">Log Out</button>
                    </div>
         </div>
-        <div className="flex h-screen w-full flex-row items-top justify-between border-2 border-solid">
-          <div className="flex h-full w-1/4 flex-col items-center justify-end bg-white pb-0">
+        <div className="flex w-full flex-row items-top justify-center border-2 border-solid">
+
+          <!--Left Panel-->
+          <!--
+          <div className="flex h-full w-1/4 flex-col items-center justify-end bg-white pb-0 bg-white">
             <button className="text-1xl rounded-lg border-2 border-solid pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="go_back()">Back</button>
           </div>
+          -->
+
+          <!--Middle Panel-->
+          <div className="flex w-3/4 flex-col items-center justify-start border-0 border-solid border-black bg-white">
 
 
+                    <table width="100%" className="mt-2 mb-2 mr-2 ml-2">
+                     <thead>
+
+                      <!--first row-->
+                      <tr>
+                       <table width="100%" className="mt-0 mb-0 mr-0 ml-0">
+                        <thead>
+                         <tr>
+                          <td width="10%" align="left"><img alt="" src="../assets/nms.png"></td>
+                          <td width="60%">
+                           <table width="100%" align="top">
+                            <tr width="100%"> 
+                             <td style="border: 0px solid #ccc;" width="100%" align="center">
+                              <table width="100%">
+                               <tr>
+                                <td>
+                                 <div className="text-sm">nms (Thailand) Co.,Ltd.</div>
+                                </td>
+                               </tr>
+                               <tr>
+                                <td>
+                                 <div className="text-sm">4/222 Harbor Office,6th Floor,Room 6B01,Moo 10. Sukhumvit Rd. T. Tungsukia,A. Sriracha Chonburi 20230</div>
+                                </td>
+                               </tr>
+                              </table>
+                             </td>
+                            </tr>
+                           </table>
+                          </td>
+                          <td width="30%">
+                           <table width="100%" className="mt-0 mb-0 mr-0 ml-0">
+                            <thead>
+                             <tr width="100%">
+                              <td width="100%"><div className="text-xs">ใบรับเงิน / PAY SLIP</div></td>
+                             </tr>
+                             <tr width="100%">
+                              <td width="100%">
+                               <table width="100%">
+                                 <tr width="100%">
+                                  <td style="border: 1px solid #ccc;" width="100%">
+                                   <table width="100%">
+                                    <theader>
+                                     <tr width="100%">
+                                      <td width="90%" align="left"><div className="text-xs">ประจำงวด/Period</div></td>
+                                      <td width="10%" align="left"><div className="text-xs">xxx</div></td>
+                                     </tr>
+                                     <tr width="100%">
+                                      <td width="90%" align="left"><div className="text-xs">ประจำสาขา/Branch</div></td>
+                                      <td width="10%" align="left"><div className="text-xs">xxx</div></td>
+                                     </tr>
+                                     <tr width="100%">
+                                      <td width="90%" align="left"><div className="text-xs">รหัสพนักงาน/Employee No</div></td>
+                                      <td width="10%" align="left"><div className="text-xs">xxx</div></td>
+                                     </tr>
+                                     <tr width="100%">
+                                      <td width="90%" align="left"><div className="text-xs">แผนก/Dept</div></td>
+                                      <td width="10%" align="left"><div className="text-xs">xxx</div></td>
+                                     </tr>
+                                    </theader>
+                                   </table>
+                                  </td>
+                                </tr>
+                              </table>
+                             </td>
+                             </tr>
+                            </thead>
+                           </table>
+                          </td>
+                         </tr>
+                        </thead>
+                       </table>
+                      </tr>
+
+                      <!--Second row-->
+                      <tr width="100%">
+                       <table width="100%" className="mt-0 mb-0 mr-0 ml-0">
+                        <tr width="100%">
+                         <td width="10%" align="center"></td>
+                         <td width="60%">
+                          <table width="100%" align="center">
+                           <tr>
+                            <td width="25%"><div className="text-xs">ชื่อสกุล/Emp.</div></td>
+                            <td width="25%"><div className="text-xs">xxx</div></td>
+                            <td width="25%"><div className="text-xs">ตำแหน่ง/Position</div></td>
+                            <td width="25%"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          </table>
+                         </td>
+                         <td width="30%" align="center"></td>
+                        </tr>
+                       </table>
+                      </tr>
+
+                      <!--Third row-->
+                      <tr width="100%">
+                       <table width="100%" className="mt-0 mb-0 mr-0 ml-0">
+                        <tr width="100%">
+                         <td width="30%" style="border: 1px solid #ccc;" align="center"><div className="text-xs">รายได้(Income)</div></td>
+                         <td width="30%" style="border: 1px solid #ccc;" align="center"><div className="text-xs">รายการหัก(Deduction)</div></td>
+                         <td width="30%" style="border: 1px solid #ccc;" align="center"><div className="text-xs"></div></td>
+                        </tr>
+                        <tr width="100%">
+                         <td width="30%" style="border: 1px solid #ccc;vertical-align:top" align="left">
+                          <table width="100%" className="mt-0 mb-0 mr-0 ml-0">
+                           <tr width="100%">
+                            <td width="70%" align="left"><div className="text-xs">เงินเดือนค่าจ้าง/Wage(K)</div></td>
+                            <td width="20%" align="left">
+                             <table width="100%">
+                              <tr width="100%">
+                               <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                               <td><div className="text-xs" align="left">บาท/วัน</div></td>
+                              </tr>
+                             </table>
+                            </td>
+                            <td width="10%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">วันทำงาน/Working days(J)</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">วัน</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ชั่วโมงการทำงาน/Working hours</div></td>
+                            <td width="35%" align="left">
+                             <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">วันหยุดประเพณี/Traditional</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">วัน</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">พักร้อน,ป่วย,ลากิจ,ลาคลอด/Maternity Leave,AL,SLD,BLD</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าแรง 75%/Pay 75% of the wage</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">วัน</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าแรง 80%/Pay 80% of the wage</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">วัน</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าแรง 85%/Pay 85% of the wage</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">วัน</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">วันหยุด/Holiday</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">วัน</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx1</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx1.3</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx1.5</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx1.7 </div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx2  ปกติ/OTx2 Regular Work Day</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx2.2</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx3  ปกติ/OTx3 Regular Work Day</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx2 วันนักขัตฤกษ์/OTx2 for Holiday Work</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx3 วันนักขัตฤกษ์/OTx2 for Holiday Work</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าล่วงเวลา OTx3.2</div></td>
+                            <td width="35%" align="left">
+                              <table width="100%">
+                               <tr width="100%">
+                                <td width="50%"><div className="text-xs" align="left">xxx</div></td>
+                                <td><div className="text-xs" align="left">ชม</div></td>
+                               </tr>
+                              </table>
+                            </td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าอาหาร/Meal Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าอาหารวันหยุด/Holiday Meal Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าอาหารล่วงเวลา/OT Meal Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่ากะดึก/Night Shift</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าอาหารกะดึก/Night Shift Meal Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่ากะเช้า/Day shift </div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าเดินทาง/Transportation</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าเช่าบ้าน/Rental Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าทักษะ/Skill-based</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าครองชีพ/Cost of Living Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าลักษณะงาน/Job description</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าตำแหน่ง/Position allownce</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าตรวจพบงานเสีย/Quality award</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าความเสี่ยง/Risk allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าตัวชี้วัดประสิทธิภาพ/KPI</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าเดินทางออกต่างจังหวัด(150)/Off-site Travel Expenses(150)</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าเดินทางออกต่างจังหวัด(180)/Off-site Travel Expenses (180)</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าจอดรถ/Parking Fee</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">เบี้ยขยัน/Diligence</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">เบี้ยขยันพิเศษ/Special Diligence</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">เงินพิเศษสำหรับพนักงาน/Extra Money for Employees</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าทำงานต่างพื้นที่/Fees for work in different area</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">เบี้ยเลี้ยงออกนอกสถานที่/Outside Allowance</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">สิทธิประโยชน์พิเศษ/Special Benefit</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าคอมมิชชั่น/Commission</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">อินเซนทีฟ/Incentive</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ค่าชดเชยพิเศษ/Special Allownce</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">รางวัลบริการประจำปี/Service Year Award</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">คืนพักร้อนประจำปี/Pay Annual Vacation</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">โบนัส/Bonus</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ตกเบิก/Adjust</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">อื่นๆ / Other</div></td>
+                            <td width="35%" align="left"><div className="text-xs">xxx</div></td>
+                            <td width="15%" align="left"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          </table>
+                         </td>
+                         <td width="30%" style="border: 1px solid #ccc;vertical-align:top" align="left">
+                          <table width="100%" className="mt-0 mb-0 mr-0 ml-0" valign="top">
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ภาษีหัก ณ ที่จ่าย/Tax</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ประกันสังคม/SSF</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">สงเคราะห์กองทุนลูกจ้าง</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">กองทุนสำรองเลี้ยงชีพ</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">กยศ/Student loan(TSLF)</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">หักบังคับคดี/Enforcement</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">เงินเบิกล่วงหน้า/Advance</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ชุดยูนิฟอร์ม/Uniform</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">คูปอง/Cashless</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">รางวัลบริการประจำปี/Service Year Award</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="60%" align="left"><div className="text-xs">หยุดงาน,สาย,กลับก่อน/Absent,Late,Leave early</div></td>
+                            <td width="40%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">อุปกรณ์โรงงาน/PPE</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">อื่นๆ/Other</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          </table>
+                         </td>
+                         <td width="30%" style="border: 1px solid #ccc;vertical-align:top" align="left">
+                          <table width="100%" className="mt-0 mb-0 mr-0 ml-0">
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">รายได้สะสม(บาท)</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ประกันสัมคมสะสม(บาท)</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">ภาษีหัก ณ ที่จ่าย สะสม(บาท)</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                           <tr width="100%">
+                            <td width="50%" align="left"><div className="text-xs">กองทุนสำรองเลี้ยงชีพสะสม(บาท)</div></td>
+                            <td width="50%" align="right"><div className="text-xs">xxx</div></td>
+                           </tr>
+                          </table>
+                         </td>
+                        </tr>
+
+                        <!--fourth row-->
+                        <tr width="100%">
+                         <td width="30%" style="border: 1px solid #ccc;" align="left"><div className="text-xs">รายได้(Income)</div></td>
+                         <td width="30%" style="border: 1px solid #ccc;" align="left"><div className="text-xs">รายการหัก(Deduction)</div></td>
+                         <td width="30%" style="border: 1px solid #ccc;" align="center"><div className="text-xs">เงินได้สุทธิ(บาท)</div></td>
+                        </tr>
 
 
+                       </table>
+                      </tr>
 
+                      
+                     
+                      
 
-           <div className="flex h-4/5 w-2/4 flex-col items-center justify-center border-0 border-solid bg-white">
+                     </thead>
+                    </table>
+              
+
+                     <!--
                      <div className="flex h-1/4 w-full flex-row items-center justify-center border-0 border-solid bg-white">
                       <div className="flex h-full w-3/4 flex-row items-center justify-center border-0 border-solid bg-white">
                        <div className="flex h-full w-1/4 flex-col items-center justify-start border-0 border-solid bg-white">
                         <div className="pt-7">
-                         <!--
-                         <Image
-                          src={logo}
-                          alt="nms logo"
-                         />
-                         -->
+                         <img alt="" src="../assets/nms.png" className="h-full bg-white">
                         </div>
                        </div>
                        <div className="flex h-full w-3/4 flex-col items-center justify-center border-0 border-solid bg-white">
@@ -72,9 +654,6 @@
                             </div>
                             <div className="flex h-full w-1/2 flex-col items-center justify-center border-0 border-solid bg-white">
                              <div className="flex h-1/3 w-full flex-row items-center justify-center border-0 border-solid bg-white">
-                              <!--<div className="pr-5 text-[0.35rem]">
-                               Sep-24
-                              </div>-->
                               <div className="pr-5 text-xs">
                                Sep-24
                               </div>
@@ -801,6 +1380,8 @@
                        </div>
                       </div>
                      </div>
+                     -->
+
                    </div>
 
 
@@ -808,16 +1389,18 @@
 
 
 
-
-           <div className="flex h-full w-1/4 flex-row items-center justify-end">
-                     <div className="flex h-full w-[30vh] flex-row items-start justify-start border-0 border-solid border-black bg-white pb-5 pl-5 pt-5">
+           <!--right panel-->
+           <!--
+           <div className="flex h-full w-1/4 flex-row items-center justify-end bg-white">
+                     <div className="flex h-full w-[30vh] flex-row items-start justify-start border-0 border-solid border-black bg-green-100 pb-5 pl-5 pt-5">
                       Publication date
                       2014.12.25
                      </div>
-                     <div className="flex h-full w-full flex-row items-end justify-end bg-white pb-0 pr-10">
+                     <div className="flex h-full w-full flex-row items-end justify-end bg-green-100 pb-0 pr-10">
                       <button className="text-1xl rounded-lg bg-blue-300 pb-2 pl-10 pr-10 pt-2 opacity-100">Downlod PDF</button>
-                     </div>
+                     </div> 
            </div>
+           -->
         </div>
   </div>
 </template>
@@ -847,5 +1430,17 @@
    }
   }
   </script>
+
+  <style>
+
+  td 
+  {border: 0px solid #ccc;}
+
+  </style> 
+
+ 
+
+
+
 
 

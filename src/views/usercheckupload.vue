@@ -22,13 +22,13 @@
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs">View</div>
           </div>
           <div className="flex w-full flex-row border-t border-b border-solid border-black" v-for="item in items">
-           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[0]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[1]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[2]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[3]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[4]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[5]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[6]}}</div>
+           <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-solid border-black text-xs">{{item[7]}}</div>
            <div className="flex w-1/5 h-full flex-row items-center justify-center border-l border-r border-solid border-black text-xs pt-2 pb-2"><button className="text-1xl rounded-lg bg-blue-300 pb-2 pl-10 pr-10 pt-2 opacity-100" v-on:click="">View</button></div>
           </div>
          </div>
@@ -77,7 +77,7 @@
 
               let object_index = 0;
                 for (let k in response.data) {
-                 response.data[object_index][0] = object_index + 1;
+                 //response.data[object_index][0] = object_index + 1;
                  this.items.push(response.data[object_index]);
                  object_index++;
                 }
